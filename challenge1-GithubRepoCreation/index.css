@@ -1,0 +1,24 @@
+body {
+    background-color: black;    
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: seagreen;
+    text-align: right;
+    margin-bottom: 100px;
+    font-family: 'Arial', sans-serif;
+}
+
+p {
+    color: lightgrey;
+    font-family: 'Comic Sans MS', "Comic Sans";
+    margin: 50px;
+}
+p:hover{
+    color: white;
+
+    font-size: 6.7rem;
+    transition: all 0.3s ease
+}
