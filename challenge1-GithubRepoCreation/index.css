@@ -16,9 +16,9 @@ p {
     font-family: 'Comic Sans MS', "Comic Sans";
     margin: 50px;
 }
+
 p:hover{
     color: white;
-
     font-size: 6.7rem;
     transition: all 0.3s ease
 }
