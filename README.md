@@ -9,10 +9,6 @@ If you want to collaborate on innovative projects or have a challenge in mind, r
 
 ---
 
----
-
----
-
 ### 📌 Featured Projects
 
 ### **[Brighterspace](https://github.com/ReavesX/brighterspace)**  
