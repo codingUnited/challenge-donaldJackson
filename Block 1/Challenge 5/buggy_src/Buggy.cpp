@@ -616,10 +616,16 @@ public:
 
     // These functions are not implemented.
     void UpdateBook(string isbn, Book* book) {
+        book->SetIsbn(isbn);
     }
     void DeleteBook(string isbn) {
+        delete isbn_to_book_map[isbn];
+        isbn_to_book_map.erase(isbn);
     }
     Book* GetBook(string isbn) {
+        if (isbn_to_book_map.count(isbn)){
+            return isbn_to_book_map[isbn];
+        }
         return nullptr;
     }
 
