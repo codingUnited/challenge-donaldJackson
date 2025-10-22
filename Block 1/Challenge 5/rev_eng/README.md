@@ -34,3 +34,5 @@
 4. Begin refactoring and restructuring of the original C++ codebase within Rust🦀.
    -- Start by recreating the utilities begin with the ReadInt() function.
    --- Sanitize the user input to ensure its valid and within range.
+
+5. Add gitignore to toplevel of repository for general things and a new one within `Block 1/Challenge 5/rev_eng`

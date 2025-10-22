@@ -2,6 +2,3 @@
 .vscode/
 *.log
 .env
-
-# Files from challenge 5 project to ignore
-**/target/
