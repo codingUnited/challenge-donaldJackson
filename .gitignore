@@ -1,0 +1,4 @@
+# Common files that might occur in any project I do.
+.vscode/
+*.log
+.env
