@@ -31,3 +31,23 @@ pub fn read_int(low: i32, high: i32) -> i32 {
         }
     }
 }
+
+pub fn show_read_menu(choices: &[&str]) -> i32 {
+    print!("\nMenu\n");
+    stdout().flush().unwrap(); // Menu will appear before options
+
+    // Enumerate then add one for display purposes.
+    for (index, choice) in choices.iter().enumerate(){
+        println!("\t{}: {}", index +1, choice);
+    }
+
+
+    // Read an integer from 1 to the length of the choices
+    // typecast choices.len to i32 since len() returns a usize by default.
+    read_int(1, choices.len as i32) 
+    
+}
+
+pub fn get_current_time_and_date() -> String {
+    // Nothing here yet.
+}
