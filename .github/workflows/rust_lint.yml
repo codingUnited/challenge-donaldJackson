@@ -1,0 +1,33 @@
+name: Rust Lint & Format
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+  # Path to the rust for challenge 5
+  RUST_PROJECT_DIR: ./Block 1/Challenge 5/rev_eng
+
+jobs:
+  check:
+    name: Lint and Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Check formatting
+        run: cargo fmt -- --check
+        working-directory: ${{ env.RUST_PROJECT_DIR }}
+
+      - name: Run linter (Clippy)
+        run: cargo clippy -- -D warnings
+        working-directory: ${{ env.RUST_PROJECT_DIR }}
