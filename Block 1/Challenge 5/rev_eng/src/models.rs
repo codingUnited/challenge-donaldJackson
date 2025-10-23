@@ -10,7 +10,11 @@ pub struct Book{
 }
 
 pub struct User{
-    // Nothing Here Yet.
+    pub username: String,
+    pub password: String,
+    pub name: String,
+    pub email: String,
+    pub is_admin: bool,
 }
 
 pub struct BookReadingSession{
