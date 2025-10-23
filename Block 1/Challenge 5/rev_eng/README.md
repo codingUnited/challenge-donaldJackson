@@ -84,3 +84,11 @@ Add gitignore to top level of repository for general things and a new one within
 - **`show_read_menu()`** – Behaves the same. Unchanged behavior from `Block 1/Challenge 5/buggy_src/Buggy.cpp`
 - **`get_current_time_and_date()`** – Uses the Chrono function `now()` then formats it to the same way `Block 1/Challenge 5/buggy_src/Buggy.cpp` does
 - **`read_string()`** – ***NEW*** function which helps to read full lines of text, sanitizing for empty inputs and fixing the behavior presented by `cin >> str` within `Block 1/Challenge 5/buggy_src/Buggy.cpp` that caused only the first word of the title to be read
+
+## Step 8: Implementation of the Data Models for Book, User, and BookReadingSession
+- **`Book`**:
+
+- **`User`**:
+
+- **`BookReadingSession`**:
+
