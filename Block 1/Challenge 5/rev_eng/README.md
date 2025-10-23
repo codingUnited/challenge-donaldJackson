@@ -86,9 +86,10 @@ Add gitignore to top level of repository for general things and a new one within
 - **`read_string()`** – ***NEW*** function which helps to read full lines of text, sanitizing for empty inputs and fixing the behavior presented by `cin >> str` within `Block 1/Challenge 5/buggy_src/Buggy.cpp` that caused only the first word of the title to be read
 
 ## Step 8: Implementation of the Data Models for Book, User, and BookReadingSession
-- **`Book`**: 
+- **`Book`**: A public struct containing the author, isbn title, and page contents.
 
-- **`User`**:
+- **`User`**: A public struct containing the admin status, email, name, password, and username. 
 
-- **`BookReadingSession`**:
+
+- **`BookReadingSession`**: A public struct containing the book isbn, current page, and last access date.
 
