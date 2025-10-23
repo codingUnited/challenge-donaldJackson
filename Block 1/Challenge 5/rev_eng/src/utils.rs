@@ -1,11 +1,12 @@
 use std::io::{Write, stdin, stdout};
+use chrono::prelude::*;
 
 // Reads an integer from the user within a given range.
 // If the user enters an invalid input, it will prompt the user to enter a valid input.
 pub fn read_int(low: i32, high: i32) -> i32 {
     if low > high {
         println!("Invalid range");
-        return -1;
+        return -1; // Return -1 to indicate an error.
     }
 
     loop {
@@ -49,5 +50,8 @@ pub fn show_read_menu(choices: &[&str]) -> i32 {
 }
 
 pub fn get_current_time_and_date() -> String {
-    // Nothing here yet.
+    let current_time = Local::now();
+
+    // Format the string to match buggy.cpp format
+    current_time.format("%Y-%m-%d %H:%M:%S").to_string()
 }
