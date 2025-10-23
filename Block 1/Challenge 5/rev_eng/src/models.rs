@@ -9,6 +9,8 @@ pub struct Book{
     pub pages: Vec<String>,
 }
 
+
+// This replaces the C++ User class.
 pub struct User{
     pub username: String,
     pub password: String,
@@ -17,6 +19,9 @@ pub struct User{
     pub is_admin: bool,
 }
 
+// This replaces the C++ BookReadingSession class.
 pub struct BookReadingSession{
-    // Nothing Here Yet.
+    pub book_isbn: String,
+    pub current_page: usize,
+    pub last_access_date: String,
 }
