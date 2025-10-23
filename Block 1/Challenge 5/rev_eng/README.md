@@ -36,3 +36,12 @@
    --- Sanitize the user input to ensure its valid and within range.
 
 5. Add gitignore to toplevel of repository for general things and a new one within `Block 1/Challenge 5/rev_eng`
+
+6. Add linting and formatting action
+   `.github/workflows/rust_lint.yml` uses Clippy and rustfmt to format and lint everything in the project directory.
+
+7. Implement utils.rs
+   -- read_int() which is now safe from bad input and invalid ranges through input sanitization.
+   -- show_read_menu() which behaves the same. unchanged behavior from `Block 1/Challenge 5/buggy_src/Buggy.cpp`
+   -- get_current_time_and_date() which uses the Chrono function now() then formats it to the same way `Block 1/Challenge 5/buggy_src/Buggy.cpp` does.
+   -- ***NEW*** read_string() function which helps to read full lines of text, sanitizing for empty inputs and fixing the behavior presented by `cin >> str` within `Block 1/Challenge 5/buggy_src/Buggy.cpp` that caused only the first word of the title to be read.
