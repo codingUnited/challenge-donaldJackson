@@ -61,4 +61,7 @@ impl BooksManager {
         &self.books.get(isbn)
     }
 
+    pub fn list_books(&self) -> &HashMap<String, Book> {
+        &self.books
+    }
 }
