@@ -7,7 +7,7 @@ use chrono::prelude::*;
 pub fn read_int(low: i32, high: i32) -> i32 {
     if low > high {
         // changed to a panic, since this is a programming error, not a user input error.
-=        panic!(
+        panic!(
             "Invalid range: low ({}) is greater than high ({})",
             low, high
         );

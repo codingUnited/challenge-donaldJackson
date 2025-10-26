@@ -2,9 +2,9 @@ name: Rust Lint & Format
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "class-implementations" ] # Added new branch
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "class-implementations" ] # Added new branch
 
 env:
   CARGO_TERM_COLOR: always
