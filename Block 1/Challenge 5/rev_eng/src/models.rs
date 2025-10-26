@@ -18,7 +18,7 @@ pub struct User {
 }
 
 // This replaces the C++ BookReadingSession class.
-=pub struct BookReadingSession {
+pub struct BookReadingSession {
     pub book_isbn: String,
     pub current_page: usize,
     pub last_access_date: String,
