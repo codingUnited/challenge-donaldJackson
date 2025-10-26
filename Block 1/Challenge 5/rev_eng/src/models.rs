@@ -1,17 +1,15 @@
 use crate::utils;
 
-
 // This replaces the C++ Book class.
-pub struct book{
+pub struct Book {
     pub isbn: String,
     pub title: String,
     pub author: String,
     pub pages: Vec<String>,
 }
 
-
 // This replaces the C++ User class.
-pub struct user{
+pub struct User {
     pub username: String,
     pub password: String,
     pub name: String,
@@ -20,7 +18,7 @@ pub struct user{
 }
 
 // This replaces the C++ BookReadingSession class.
-pub struct book_reading_session{
+=pub struct BookReadingSession {
     pub book_isbn: String,
     pub current_page: usize,
     pub last_access_date: String,

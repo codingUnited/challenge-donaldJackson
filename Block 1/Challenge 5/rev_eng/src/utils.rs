@@ -1,4 +1,5 @@
-use std::io::{Write, stdin, stdout};
+// rustfmt prefers std imports first, then external crates
+use std::io::{stdin, stdout, Write};
 use chrono::prelude::*;
 
 // Reads an integer from the user within a given range.
@@ -6,9 +7,10 @@ use chrono::prelude::*;
 pub fn read_int(low: i32, high: i32) -> i32 {
     if low > high {
         // changed to a panic, since this is a programming error, not a user input error.
-        panic!("Invalid range: low ({}) is greater 
-                than high ({})", low, high);
-
+=        panic!(
+            "Invalid range: low ({}) is greater than high ({})",
+            low, high
+        );
     }
 
     loop {
@@ -39,20 +41,21 @@ pub fn show_read_menu(choices: &[&str]) -> i32 {
     print!("\nMenu\n");
     stdout().flush().unwrap(); // Menu will appear before options
 
-    if choices.is_empty(){ // Sanity check for empty choices array, programmign error not user input error.
-        panic!("Called with an empty choices array.")
+    if choices.is_empty() {
+        // Sanity check for empty choices array, programmign error not user input error.
+        panic!("Called with an empty choices array.");
     }
 
     // Enumerate then add one for display purposes.
-    for (index, choice) in choices.iter().enumerate(){
-        println!("\t{}: {}", index +1, choice);
+    // Added space for `{` and around `+`
+    for (index, choice) in choices.iter().enumerate() {
+        println!("\t{}: {}", index + 1, choice);
     }
-
 
     // Read an integer from 1 to the length of the choices
     // typecast choices.len to i32 since len() returns a usize by default.
-    read_int(1, choices.len as i32) 
-    
+    // Removed extra blank lines
+    read_int(1, choices.len() as i32)
 }
 
 pub fn get_current_time_and_date() -> String {
@@ -62,8 +65,8 @@ pub fn get_current_time_and_date() -> String {
     current_time.format("%Y-%m-%d %H:%M:%S").to_string()
 }
 
-// This is to fix issues with buggy.cpp where cin >> str 
-// only reads the first word in a title/string.\
+// This is to fix issues with buggy.cpp where cin >> str
+// only reads the first word in a title/string.
 // technically this is not needed for the challenge as rust's
 // read_line reads the whole line by default.
 // This handles input sanitization so there are no empty strings inputted.
@@ -83,7 +86,8 @@ pub fn read_input_string(prompt: &str) -> String {
         // otherwise we trim the input and return it.
 
         let trimmed_input = input.trim().to_string();
-        if trimmed.is_empty() {
+
+        if trimmed_input.is_empty() {
             println!("Error: Input should not be empty. Try again.");
             continue;
         }
