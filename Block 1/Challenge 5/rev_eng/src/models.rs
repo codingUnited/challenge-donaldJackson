@@ -72,7 +72,12 @@ impl User {
             self.name, self.email, self.username, admin_str
         )
     }
-    // TODO: Add function to add a session
+    pub fn add_reading_session(&mut self, book: &Book) -> &mut BookReadingSession {
+        let session = BookReadingSession::new(book.isbn.clone());
+        self.reading_sessions.push(session);
+        // Return a mutable reference to the session that was added
+        self.reading_sessions.last_mut().unwrap()
+    }
 }
 
 impl BookReadingSession {
