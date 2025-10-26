@@ -46,4 +46,19 @@ impl BooksManager {
         self.add_book(book2);
         self.add_book(book3);   
     }
+
+    pub fn add_book(&mut self, book: Book) -> bool {
+        if self.books.contains_key(&book.isbn) {
+            println!("Book with ISBN {} already exists.", book.isbn);
+            return false;
+        }
+        
+        self.books.insert(book.isbn.clone(), book);
+        true
+    }
+
+    pub fn get_book(&self, isbn: &str) -> Option<&Book> {
+        &self.books.get(isbn)
+    }
+
 }
