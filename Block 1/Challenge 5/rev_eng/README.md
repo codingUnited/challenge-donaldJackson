@@ -86,10 +86,10 @@ Add gitignore to top level of repository for general things and a new one within
 - **`read_string()`** – ***NEW*** function which helps to read full lines of text, sanitizing for empty inputs and fixing the behavior presented by `cin >> str` within `Block 1/Challenge 5/buggy_src/Buggy.cpp` that caused only the first word of the title to be read
 
 ## Step 8: Implementation of the Data Models for Book, User, and BookReadingSession
-- **`Book`**: A public struct containing the author, isbn title, and page contents.
+- **`Book`**: A public struct containing the author, isbn title, and page contents. The class implementation in `Block 1/Challenge 5/rev_eng/src/models.rs` is just a constructor. I Will implement a manager within another file
 
-- **`User`**: A public struct containing the admin status, email, name, password, and username. 
+- **`User`**: A public struct containing the admin status, email, name, password, and username. This constructs a new user, defaulting admin status to false and starting a reading session by being empty. At this point I have not added the ability to add a session.
 
 
-- **`BookReadingSession`**: A public struct containing the book isbn, current page, and last access date.
+- **`BookReadingSession`**: A public struct containing the book isbn, current page, and last access date. This receives a critical safety update, instead of owning the book pointer it instead now just borrows the book. 
 
