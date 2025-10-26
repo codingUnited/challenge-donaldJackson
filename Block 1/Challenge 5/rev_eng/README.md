@@ -90,6 +90,9 @@ Add gitignore to top level of repository for general things and a new one within
 
 - **`User`**: A public struct containing the admin status, email, name, password, and username. This constructs a new user, defaulting admin status to false and starting a reading session by being empty. Including the ability to add a session.
 
-
 - **`BookReadingSession`**: A public struct containing the book isbn, current page, and last access date. This receives a critical safety update, instead of owning the book pointer it instead now just borrows the book. 
 
+## Step 9: Implementation of the BooksManager and UsersManager:
+- **`UsersManager`**:
+
+- **`BooksManager`**:
